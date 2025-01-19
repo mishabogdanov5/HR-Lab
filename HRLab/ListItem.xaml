@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="LoadDataApp.ListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LoadDataApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth ="1600" Background="Transparent">
+    <StackPanel x:Name="ListItemPanel" Orientation="Vertical" Background="Orange" Margin="15, 10, 0, 12">
+        <Label x:Name="NameLabel" Content="Name: " FontSize="20" Margin="0,0,0,10"/>
+        <Label x:Name="AgeLabel" Content="Age: " FontSize="20" Margin="0,0,0,10"/>
+        <Label x:Name="ExperienceLabel" Content="Experience: " FontSize="20" Margin="0,0,0,10"/>
+    </StackPanel>
+</UserControl>

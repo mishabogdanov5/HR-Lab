@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LoadDataApp/1.0.0": {
+        "runtime": {
+          "LoadDataApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LoadDataApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
