@@ -20,3 +20,4 @@ C:\Users\79136\source\repos\Projects\HR_LAB\HRLab\obj\Debug\net8.0-windows\refin
 C:\Users\79136\source\repos\Projects\HR_LAB\HRLab\obj\Debug\net8.0-windows\HrLab.pdb
 C:\Users\79136\source\repos\Projects\HR_LAB\HRLab\obj\Debug\net8.0-windows\HrLab.genruntimeconfig.cache
 C:\Users\79136\source\repos\Projects\HR_LAB\HRLab\obj\Debug\net8.0-windows\ref\HrLab.dll
+C:\Users\79136\source\repos\Projects\HR_LAB\HRLab\obj\Debug\net8.0-windows\HrLab.sourcelink.json

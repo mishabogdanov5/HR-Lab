@@ -12,14 +12,14 @@ namespace LoadDataApp
 		public double AlgoritmsMark { get; set; }
 		public double FrameworkMark { get; set; }
 
-		public VisitMark(int languageMark, int algoritmsMark, int frameworkMark) 
+		public VisitMark(double languageMark, double algoritmsMark, double frameworkMark) 
 		{
 			if (IsMarkValid(languageMark)) LanguageMark = languageMark;
 			if (IsMarkValid(algoritmsMark)) AlgoritmsMark = algoritmsMark;
 			if (IsMarkValid(frameworkMark)) FrameworkMark = frameworkMark;
 		}
 
-		private bool IsMarkValid(int mark) 
+		private bool IsMarkValid(double mark) 
 		{
 			return (mark >= 0) && (mark <= 5);
 		}

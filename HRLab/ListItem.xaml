@@ -5,10 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LoadDataApp"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth ="1600" Background="Transparent">
-    <StackPanel x:Name="ListItemPanel" Orientation="Vertical" Background="Orange" Margin="15, 10, 0, 12">
-        <Label x:Name="NameLabel" Content="Name: " FontSize="20" Margin="0,0,0,10"/>
-        <Label x:Name="AgeLabel" Content="Age: " FontSize="20" Margin="0,0,0,10"/>
-        <Label x:Name="ExperienceLabel" Content="Experience: " FontSize="20" Margin="0,0,0,10"/>
+             d:DesignHeight="600" d:DesignWidth ="1360" Background="Transparent" Margin="0,0,0,10">
+    <StackPanel x:Name="ListItemPanel" Orientation="Vertical" Background="White" Width="1360">
+        <Label x:Name="NameLabel" Content="Name: " FontSize="20" Margin="0,0,0,15"/>
+        <Label x:Name="AgeLabel" Content="Age: " FontSize="20" Margin="0,0,0,15"/>
+        <Label x:Name="EmailLabel" Content="Email: " FontSize="20" Margin="0,0,0,15"/>
+        <Button x:Name="ExtraInfoButton" Background="Orange" Content="View More" HorizontalAlignment="Right" FontSize="18" Margin="0,0,20,15" Padding="30,5,30,5" Click="ExtraInfoButton_Click"/>
+        <Button x:Name="LineButton" Background="Orange" Height="5"/>
     </StackPanel>
 </UserControl>

@@ -60,8 +60,8 @@
         
             <Button x:Name="AddButton" Content="Add" Margin="0, 50, 0, 0" Background="Orange" Padding="80, 10, 80, 10" HorizontalAlignment="Center"  FontSize="16" Click="AddButton_Click"/>
         </StackPanel>
-        <ScrollViewer x:Name="ScrollItem" VerticalScrollBarVisibility="Auto" Margin="50" DockPanel.Dock="Top">
-            <ListBox x:Name="CondidatesList" Margin="15">
+        <ScrollViewer x:Name="ScrollItem" VerticalScrollBarVisibility="Auto" Margin="50, 50, 50, 100" DockPanel.Dock="Top" Width="1400">
+            <ListBox x:Name="CondidatesList" Width="1380">
         
             </ListBox>
         </ScrollViewer>

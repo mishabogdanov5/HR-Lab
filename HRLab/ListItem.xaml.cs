@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,14 +17,27 @@ using System.Windows.Shapes;
 
 namespace LoadDataApp
 {
-	/// <summary>
-	/// Логика взаимодействия для ListItem.xaml
-	/// </summary>
 	public partial class ListItem : UserControl
 	{
-		public ListItem()
+		private Condidate _condidate;
+		public ListItem(Condidate condidate)
 		{
 			InitializeComponent();
+			_condidate = condidate;
+
+			InitiallizeInfo(condidate);
 		}
-	}
+
+		private void InitiallizeInfo(Condidate condidate) 
+		{
+			NameLabel.Content += condidate.Name;
+			AgeLabel.Content += condidate.Age.ToString();
+			EmailLabel.Content += condidate.Email;
+		}
+
+		private void ExtraInfoButton_Click(object sender, RoutedEventArgs e)
+		{
+
+        }
+    }
 }
