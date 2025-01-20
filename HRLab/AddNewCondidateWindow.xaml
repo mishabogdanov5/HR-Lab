@@ -1,0 +1,72 @@
+﻿<Window x:Class="HrLab.AddNewCondidateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HrLab"
+        mc:Ignorable="d"
+        Title="AddNewCondidateWindow" Height="540" Width="600">
+    <Grid>
+        <StackPanel Orientation="Vertical" x:Name="InfoPanel">
+            <StackPanel x:Name="NamePanel" Orientation="Horizontal">
+                <Label x:Name="NameLabel" Content="Name:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <TextBox x:Name="NameTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="300" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel x:Name="EmailPanel" Orientation="Horizontal">
+                <Label x:Name="EmailLabel" Content="Email: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <TextBox x:Name="EmailTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="300" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel x:Name="AgePanel" Orientation="Horizontal">
+                <Label x:Name="AgeLabel" Content="Age:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <TextBox x:Name="AgeTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="45" VerticalContentAlignment="Center" FontSize="14"/>
+            </StackPanel>
+            <StackPanel x:Name="PolPanel" Orientation="Horizontal" Margin="0, 0, 10, 0">
+                <Label x:Name="PolLabel" Content="Who: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <RadioButton x:Name="Man" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="M"  Background="Orange" IsChecked="True"/>
+                <RadioButton x:Name="Women" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="W"  Background="Orange"/>
+            </StackPanel>
+            <StackPanel x:Name="SectionPanel" Orientation="Horizontal">
+                <Label x:Name="SetionLabel" Content="IT Sphere:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <ComboBox x:Name="SectionComboBox" Margin="10,20,0,0" Width="200" Background="Blue" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <ComboBoxItem Content="Frontend" Background="Transparent"/>
+                    <ComboBoxItem Content="Backend" Background="Transparent"/>
+                    <ComboBoxItem Content="Full Stack" IsSelected="True"  Background="Transparent"/>
+                    <ComboBoxItem Content="ML"  Background="Transparent"/>
+                    <ComboBoxItem Content="Data Scientist"  Background="Transparent"/>
+                    <ComboBoxItem Content="Game Developer"  Background="Transparent"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel x:Name="ExperiencePanel" Orientation="Horizontal">
+                <Label x:Name="ExperienceLabel" Content="Experience (year):" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <TextBox x:Name="ExperienceTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="30" VerticalContentAlignment="Center" FontSize="14"/>
+            </StackPanel>
+            <StackPanel x:Name="EducationPanel" Orientation="Horizontal">
+                <Label x:Name="EducationLabel" Content="Education Level:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <ComboBox x:Name="EducationComboBox" Margin="10,20,0,0" Width="200" Background="Blue" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <ComboBoxItem Content="School Not Full" Background="Transparent"/>
+                    <ComboBoxItem Content="School Full" Background="Transparent"/>
+                    <ComboBoxItem Content="Middle Speciality" IsSelected="True"  Background="Transparent"/>
+                    <ComboBoxItem Content="High Not Full"  Background="Transparent"/>
+                    <ComboBoxItem Content="Full High"  Background="Transparent"/>
+                    <ComboBoxItem Content="Science Level"  Background="Transparent"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel x:Name="VisitDatePanel" Orientation="Horizontal">
+                <Label x:Name="VisitDateLabel" Content="HR Visit Date:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <DatePicker x:Name="VisitDatePicker" Width="200" Margin="10,20,0,0" VerticalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel x:Name="VisitMarkPanel" Orientation="Horizontal">
+                <Label x:Name="VisitMarkLabel" Content="Visit Mark:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <TextBox x:Name="LanguageMarkTextBox" Width="30" Margin="20,20,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="AlgoritmsMarkTextBox" Width="30" Margin="10,20,0,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="FrameworkMarkTextBox" Width="30" Margin="10,20,0,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"/>
+            </StackPanel>
+            <StackPanel x:Name="HasCoursesPanel" Orientation="Horizontal" Margin="0, 0, 0, 0">
+                <Label x:Name="HasCoursesLabel" Content="Courses: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
+                <RadioButton x:Name="HasCourses" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="Yes" Background="Orange"/>
+                <RadioButton x:Name="HasNotCourses" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="No"  Background="Orange" IsChecked="True" />
+            </StackPanel>
+            <Button x:Name ="AddButton" FontSize="20" Content="Add" Margin="20" Padding="50, 10, 50, 10" HorizontalAlignment="Center" Background="Orange" Click="AddButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

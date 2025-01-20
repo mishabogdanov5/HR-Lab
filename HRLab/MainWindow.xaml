@@ -7,63 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="1600" MinHeight="640" WindowState="Maximized">
     <DockPanel Margin="0,0,0,0">
-        <StackPanel x:Name="AddPanel" Orientation="Vertical" DockPanel.Dock="Top">
-            <StackPanel Orientation="Horizontal" x:Name="InfoPanel">
-                <StackPanel x:Name="NamePanel" Orientation="Horizontal">
-                    <Label x:Name="NameLabel" Content="Name:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <TextBox x:Name="NameTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="120" VerticalContentAlignment="Center"/>
-                </StackPanel>
-                <StackPanel x:Name="EmailPanel" Orientation="Horizontal">
-                    <Label x:Name="EmailLabel" Content="Email: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <TextBox x:Name="EmailTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="100" VerticalContentAlignment="Center"/>
-                </StackPanel>
-                <StackPanel x:Name="AgePanel" Orientation="Horizontal">
-                    <Label x:Name="AgeLabel" Content="Age:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <TextBox x:Name="AgeTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="45" VerticalContentAlignment="Center" FontSize="14"/>
-                </StackPanel>
-                <StackPanel x:Name="PolPanel" Orientation="Horizontal" Margin="15, 0, 10, 0">
-                    <Label x:Name="PolLabel" Content="Who: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <RadioButton x:Name="Man" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="M"  Background="Orange" IsChecked="True"/>
-                    <RadioButton x:Name="Women" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="W"  Background="Orange"/>
-                </StackPanel>
-                <StackPanel x:Name="ExperiencePanel" Orientation="Horizontal">
-                    <Label x:Name="ExperienceLabel" Content="Experience (year):" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <TextBox x:Name="ExperienceTextBox" Text="" Margin="10, 20, 0, 0" TextAlignment="Center" Width="30" VerticalContentAlignment="Center" FontSize="14"/>
-                </StackPanel>
-                <StackPanel x:Name="EducationPanel" Orientation="Horizontal">
-                    <Label x:Name="EducationLabel" Content="Education Level:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                    <ComboBox x:Name="EducationComboBox" Margin="10,20,0,0" Width="120" Background="Blue" VerticalContentAlignment="Center">
-                        <ComboBoxItem Content="School Not Full" Background="Transparent"/>
-                        <ComboBoxItem Content="School Full" Background="Transparent"/>
-                        <ComboBoxItem Content="Middle Speciality" IsSelected="True"  Background="Transparent"/>
-                        <ComboBoxItem Content="High Not Full"  Background="Transparent"/>
-                        <ComboBoxItem Content="Full High"  Background="Transparent"/>
-                        <ComboBoxItem Content="Science Level"  Background="Transparent"/>
-                    </ComboBox>
-                    <StackPanel x:Name="VisitDatePanel" Orientation="Horizontal">
-                        <Label x:Name="VisitDateLabel" Content="HR Visit Date:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                        <DatePicker x:Name="VisitDatePicker" Width="150" Margin="10,20,0,0" VerticalContentAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel x:Name="VisitMarkPanel" Orientation="Horizontal">
-                        <Label x:Name="VisitMarkLabel" Content="Visit Mark:" VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                        <TextBox x:Name="LanguageMarkTextBox" Width="20" Margin="20,20,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                        <TextBox x:Name="AlgoritmsMarkTextBox" Width="20" Margin="10,20,0,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"/>
-                        <TextBox x:Name="FrameworkMarkTextBox" Width="20" Margin="10,20,0,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel x:Name="HasCoursesPanel" Orientation="Horizontal" Margin="15, 0, 0, 0">
-                        <Label x:Name="HasCoursesLabel" Content="Courses: " VerticalContentAlignment="Center" Padding="0" Margin="10,20, 0, 0"/>
-                        <RadioButton x:Name="HasCourses" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="Yes" Background="Orange"/>
-                        <RadioButton x:Name="HasNotCourses" Margin="10, 20, 0, 0" VerticalAlignment="Center" Content="No"  Background="Orange" IsChecked="True" />
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
+
+        <Button x:Name="AddButton" DockPanel.Dock ="Top" Content="Add New Condidate" Margin="0, 100, 0, 0" Background="Orange" Padding="80, 10, 80, 10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Click="AddButton_Click"/>
         
-            <Button x:Name="AddButton" Content="Add" Margin="0, 50, 0, 0" Background="Orange" Padding="80, 10, 80, 10" HorizontalAlignment="Center"  FontSize="16" Click="AddButton_Click"/>
-        </StackPanel>
-        <ScrollViewer x:Name="ScrollItem" VerticalScrollBarVisibility="Auto" Margin="50, 50, 50, 100" DockPanel.Dock="Top" Width="1400">
+        <ScrollViewer x:Name="ScrollItem" VerticalScrollBarVisibility="Auto" Margin="50" DockPanel.Dock="Top" Width="1400">
             <ListBox x:Name="CondidatesList" Width="1380">
         
             </ListBox>
         </ScrollViewer>
+
     </DockPanel>
 </Window>

@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Transactions;
+using HrLab;
 
 namespace LoadDataApp
 {
@@ -43,6 +44,7 @@ namespace LoadDataApp
 		}
 
 		public Identity Pol { get; set; }
+		public ITSphere Sphere { get; set; }
 		public EducationLevel Education { get; set; }
 		public DateTime VisitDate { get; set; }
 		public VisitMark Mark { get; set; }
