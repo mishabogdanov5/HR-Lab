@@ -8,13 +8,22 @@
         Title="MainWindow" MinWidth="1600" MinHeight="640" WindowState="Maximized">
     <DockPanel Margin="0,0,0,0">
 
-        <Button x:Name="AddButton" DockPanel.Dock ="Top" Content="Add New Condidate" Margin="0, 100, 0, 0" Background="Orange" Padding="80, 10, 80, 10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Click="AddButton_Click"/>
-        
+        <Button x:Name="AddButton" DockPanel.Dock ="Top" Content="Add New Condidate" Margin="0, 100, 0, 40" Background="Orange" Padding="80, 10, 80, 10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Click="AddButton_Click"/>
+
+        <ComboBox DockPanel.Dock="Top" Text="Sorting" x:Name="SortingComboBox" Width="150" HorizontalAlignment="Left" Margin="30, 0,0,0" SelectionChanged="SortingComboBox_SelectionChanged">
+            <ComboBoxItem Content="По дате добавления возр." x:Name="Date" IsSelected="True"/>
+            <ComboBoxItem Content="По дате добавления убыв." x:Name="DateDescending"/>
+            <ComboBoxItem Content="По оценке возр." x:Name="Mark" />
+            <ComboBoxItem Content="По оценке убыв." x:Name="MarkDescending" />
+        </ComboBox>
+
         <ScrollViewer x:Name="ScrollItem" VerticalScrollBarVisibility="Auto" Margin="50" DockPanel.Dock="Top" Width="1400">
             <ListBox x:Name="CondidatesList" Width="1380">
         
             </ListBox>
         </ScrollViewer>
+
+        
 
     </DockPanel>
 </Window>

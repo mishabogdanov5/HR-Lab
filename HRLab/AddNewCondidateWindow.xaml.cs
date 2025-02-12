@@ -20,10 +20,12 @@ namespace HrLab
 	public partial class AddNewCondidateWindow : Window
 	{
 		private OnCondidateAdded _handler;
-		public AddNewCondidateWindow(OnCondidateAdded handler)
+		private ICondidatesRepository _repository;
+		public AddNewCondidateWindow(OnCondidateAdded handler, ICondidatesRepository repository)
 		{
 			InitializeComponent();
 			_handler = handler;
+			_repository = repository;
 		}
 
 		private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -40,10 +42,13 @@ namespace HrLab
 					Sphere = (ITSphere) SectionComboBox.SelectedIndex,
 					Education = (EducationLevel)EducationComboBox.SelectedIndex,
 					VisitDate = (DateTime)VisitDatePicker.SelectedDate,
-					Mark = new VisitMark(double.Parse(LanguageMarkTextBox.Text, _doubleFormat),
-					double.Parse(AlgoritmsMarkTextBox.Text, _doubleFormat), double.Parse(FrameworkMarkTextBox.Text, _doubleFormat)),
-					HasCourses = (bool)HasCourses.IsChecked
+					LanguageMark = Convert.ToDouble(LanguageMarkTextBox.Text, _doubleFormat),
+					FrameworkMark = Convert.ToDouble(FrameworkMarkTextBox.Text, _doubleFormat),
+					AlgoritmsMark = Convert.ToDouble(AlgoritmsMarkTextBox.Text, _doubleFormat),
+					HasCourses = (bool)HasCourses.IsChecked,
 				};
+
+				_repository.Add(current);
 
 				_handler.Invoke(current);
 				Hide();
